@@ -10,8 +10,8 @@ function 北を向いているか (方角: number) {
 let 方角 = 0
 basic.showIcon(IconNames.Yes)
 basic.forever(function () {
-    方角 = 0
-    if (北を向いているか(input.compassHeading()) == 1) {
+    方角 = input.compassHeading()
+    if (北を向いているか(方角) == 1) {
         basic.showString("N")
     } else {
         basic.clearScreen()
